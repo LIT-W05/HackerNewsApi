@@ -1,0 +1,22 @@
+﻿@using HackerNews.Api
+@model IEnumerable<NewsStory>
+    
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>Score</th>
+        <th>By</th>
+    </tr>
+    @foreach (var story in Model)
+    {
+        <tr>
+            <td>
+                <a target="_blank" href="@story.Url">@story.Title</a>
+            </td>
+            <td>@story.Score</td>
+            <td>@story.By</td>
+        </tr>
+    }
+</table>
